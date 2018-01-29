@@ -1,0 +1,26 @@
+{
+  "name": "getfalcon/theme",
+  "version": "0.0.1-alpha",
+  "description": "Module Theme for falcon cms",
+  "type": "falcon-extension",
+  "keywords": [
+    "yii2",
+    "extension"
+  ],
+  "license": "GPL-3.0-only",
+  "authors": [
+    {
+      "name": "scriptua",
+      "email": "script@email.ua"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "*",
+    "getfalcon/core": "@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "falcon\\theme\\": ""
+    }
+  }
+}

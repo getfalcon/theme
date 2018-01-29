@@ -1,0 +1,8 @@
+# Module Name
+name: theme
+
+# Module Class Name
+moduleClass: \falcon\theme\Module
+
+# Module Bootstrap Class Name
+bootstrapClass: \falcon\theme\Bootstrap
