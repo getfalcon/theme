@@ -6,4 +6,4 @@
  * @version    0.0.1-alpha.0.1
  */
 
-\falcon\core\components\ComponentRegistrar::register(\falcon\core\components\ComponentRegistrar::MODULE, 'theme', __DIR__);
+\falcon\core\components\ComponentRegistrar::register(\falcon\core\components\ComponentRegistrar::MODULE, 'Falcon_Theme', __DIR__);

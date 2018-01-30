@@ -17,10 +17,10 @@ class Bootstrap implements \yii\base\BootstrapInterface {
 	 * @param \yii\base\Application $app
 	 */
 	public function bootstrap($app) {
-		if ($app instanceof \falcon\core\frontend\Application) {
+        if ($app instanceof \falcon\frontend\app\Application) {
 			$app->getView()->theme = new FrontendTheme();
 		}
-		if ($app instanceof \falcon\core\backend\Application) {
+        if ($app instanceof \falcon\backend\app\Application) {
 			$app->getView()->theme = new BackendTheme();
 		}
 	}
