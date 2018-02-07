@@ -10,18 +10,22 @@ namespace falcon\theme;
 
 use app\themes\falcon\base\Theme as FrontendTheme;
 use app\themes\falcon\backend\Theme as BackendTheme;
+use yii\base\InvalidConfigException;
 
 class Bootstrap implements \yii\base\BootstrapInterface {
 
 	/**
 	 * @param \yii\base\Application $app
-	 */
+     * @throws InvalidConfigException
+     */
 	public function bootstrap($app) {
+        $container = \Yii::$container;
+
         if ($app instanceof \falcon\frontend\app\Application) {
-			$app->getView()->theme = new FrontendTheme();
+            $app->getView()->theme = $container->get(FrontendTheme::class, [$app->getView()]);
 		}
         if ($app instanceof \falcon\backend\app\Application) {
-			$app->getView()->theme = new BackendTheme();
+            $app->getView()->theme = $container->get(BackendTheme::class, [$app->getView()]);
 		}
 	}
 }
