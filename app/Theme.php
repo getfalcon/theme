@@ -85,8 +85,12 @@ class Theme extends \yii\base\Theme
                     $item = FileHelper::normalizePath(Yii::getAlias($item)) . DIRECTORY_SEPARATOR;
                     $file = $item . substr($path, $n);
 
+
                     if ($oldFrom == '@app/modules') {
-                        $file = str_replace('views' . DIRECTORY_SEPARATOR . 'frontend' . DIRECTORY_SEPARATOR, '', $file);
+                        $file = str_replace([
+                            'views' . DIRECTORY_SEPARATOR . 'frontend' . DIRECTORY_SEPARATOR,
+                            'views' . DIRECTORY_SEPARATOR . 'backend' . DIRECTORY_SEPARATOR
+                        ], '', $file);
                     }
 
                     if (is_file($file)) {
